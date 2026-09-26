@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RCAI — Research Venues Hub</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="description" content="RCAI: Research Committee (AI & Data Science). An information-sharing hub of AI &amp; DS conferences and journals for students and faculty — deadlines, venues, and calls for papers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#/">
+      <img class="brand-mark" src="assets/logo.png" alt="RCAI logo">
+      <span class="brand-text"><b>RCAI</b><span>Research Committee · AI &amp; DS</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#/">Home</a>
+      <a href="#/conferences">Conferences</a>
+      <a href="#/cfp">Call for Papers</a>
+      <a href="#/categories">Sub-fields</a>
+      <a href="#/publications">Publications</a>
+      <a href="#/blog">Blog</a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode">☾</button>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+<!-- =============================== HOME =============================== -->
+<section class="view active" id="view-home">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Research Committee · AI &amp; Data Science</div>
+        <h1>A single hub for <em>AI &amp; DS</em> research venues.</h1>
+        <p class="hero-lead">RCAI curates upcoming conferences, journals and calls for papers
+          across artificial intelligence and data science — so students and faculty always
+          know <b>where</b> and <b>by when</b> to submit their work.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#/conferences">Browse conferences</a>
+          <a class="btn btn-ghost" href="#/cfp">Open calls for papers</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b id="stat-conf">—</b><span>Conferences</span></div>
+          <div class="stat"><b id="stat-jour">—</b><span>Journals</span></div>
+          <div class="stat"><b id="stat-cat">—</b><span>Sub-fields</span></div>
+          <div class="stat"><b id="stat-pub">—</b><span>Publications</span></div>
+        </div>
+        <p class="hero-note">ⓘ Information-sharing hub only — RCAI does not process submissions. Always submit on each venue's official site.</p>
+      </div>
+      <aside class="potm-card" id="home-potm"></aside>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="section" style="padding-bottom:36px">
+      <div class="section-head">
+        <div><div class="eyebrow">Deadlines approaching</div>
+          <h2>Upcoming conferences</h2>
+          <p>National and international conferences with the soonest submission deadlines.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/conferences">View all →</a>
+      </div>
+      <div class="grid-venues" id="home-conferences"></div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="section-head">
+        <div><div class="eyebrow">Submit your work</div>
+          <h2>Upcoming calls for papers</h2>
+          <p>Open calls — full conferences and journal special issues — ordered by closing date.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/cfp">View all →</a>
+      </div>
+      <div class="grid-venues" id="home-cfp"></div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="section-head">
+        <div><div class="eyebrow">By sub-field</div>
+          <h2>Explore AI &amp; Data Science areas</h2>
+          <p>Jump to conferences and journals grouped by research sub-field.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/categories">All sub-fields →</a>
+      </div>
+      <div class="cat-grid" id="home-categories"></div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="section-head">
+        <div><div class="eyebrow">From our members</div>
+          <h2>Latest publications</h2>
+          <p>Recent peer-reviewed work by RCAI students and faculty.</p></div>
+        <a class="btn btn-outline btn-sm" href="#/publications">All publications →</a>
+      </div>
+      <div class="pub-list" id="home-publications"></div>
+    </section>
+  </div>
+</section>
+
+<!-- ============================ CONFERENCES =========================== -->
+<section class="view" id="view-conferences">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Conferences</div>
+    <div class="eyebrow">Where to present</div>
+    <h1>Conferences</h1>
+    <p>National and international AI &amp; DS conferences. Filter by region, sub-field and
+      deadline status, or search by name, country or host. Click any card for full details.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- =============================== FACULTY =========================== -->
+<section class="view" id="view-faculty">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Faculty</div>
+    <div class="eyebrow">Find a supervisor</div>
+    <h1>Faculty Research Directory</h1>
+    <p>Explore faculty by research area to find the right supervisor or resource for your
+      work. Each profile lists research areas and a few recent publications. Filter by
+      sub-field or search by name or topic.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ============================ PUBLICATIONS ========================== -->
+<section class="view" id="view-publications">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Publications</div>
+    <div class="eyebrow">From our members</div>
+    <h1>Student &amp; Faculty Publications</h1>
+    <p>The latest peer-reviewed work published by RCAI students and faculty. Click any
+      publication to read its abstract, or open it on the publisher's site.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ============================ CALL FOR PAPERS ======================= -->
+<section class="view" id="view-cfp">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Call for Papers</div>
+    <div class="eyebrow">Open calls</div>
+    <h1>Call for Papers</h1>
+    <p>Every open call in one place — conferences and journal special issues — sorted by
+      closing date. Use the status filter to focus on what is still open.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ============================== SUB-FIELDS ========================== -->
+<section class="view" id="view-categories">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Sub-fields</div>
+    <div class="eyebrow">Categorised by area</div>
+    <h1>AI &amp; Data Science sub-fields</h1>
+    <p>Choose a research area to see its conferences and journals on one page.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px">
+    <div class="cat-grid" id="categories-grid"></div>
+  </div>
+</section>
+
+<!-- =========================== CATEGORY DETAIL ======================== -->
+<section class="view" id="view-category">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / <a href="#/categories">Sub-fields</a> / <span id="cat-crumb">Area</span></div>
+    <h1 id="cat-title">Sub-field</h1>
+    <p id="cat-blurb"></p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ================================ BLOG ============================== -->
+<section class="view" id="view-blog">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Blog</div>
+    <div class="eyebrow">Guides &amp; insights</div>
+    <h1>RCAI Blog</h1>
+    <p>Practical guidance on publishing, peer review, choosing venues and building a research
+      career — written for students and faculty. Click any article to read the full piece.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ============================ BLOG POST (single) =================== -->
+<section class="view" id="view-blogpost"></section>
+
+<!-- ============================== DOWNLOADS ========================== -->
+<section class="view" id="view-downloads">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / Downloads</div>
+    <div class="eyebrow">Paper templates</div>
+    <h1>Downloads — LaTeX / Overleaf Templates</h1>
+    <p>Official LaTeX templates for major journals and conferences, ready to open in
+      Overleaf. Filter by type, publisher or sub-field. Always confirm you're using the
+      current version required by your target venue.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px"><div class="list-mount"></div></div>
+</section>
+
+<!-- ================================ ABOUT ============================= -->
+<section class="view" id="view-about">
+  <div class="subhero"><div class="wrap">
+    <div class="breadcrumb"><a href="#/">Home</a> / About</div>
+    <div class="eyebrow">About the committee</div>
+    <h1>About RCAI</h1>
+    <p>The Research Committee for AI &amp; Data Science.</p>
+  </div></div>
+  <div class="wrap section" style="padding-top:26px;max-width:760px">
+    <div class="panel" style="border:1px solid var(--border);border-radius:var(--r-md);padding:28px">
+      <p style="margin-top:0"><b>RCAI (Research Committee · AI &amp; DS)</b> maintains this hub as a
+        central, information-sharing resource for students and faculty. It brings together
+        upcoming national and international conferences, journals and calls for papers across
+        artificial intelligence and data science.</p>
+      <p><b>What this site is:</b> a curated directory of research venues, updated regularly,
+        to help researchers decide where and by when to submit their work.</p>
+      <p><b>What this site is not:</b> a submission portal. RCAI does not receive, review or
+        process papers. All submissions are made directly on each venue's official website.</p>
+      <h3 style="margin:22px 0 10px;font-size:1.1rem;color:var(--ink)">How the data stays current</h3>
+      <p style="margin-top:0">All venue information lives in a single, plain-text data file
+        (<span class="mono" style="background:var(--card-2);padding:2px 6px;border-radius:5px">data.js</span>).
+        Committee members can add or update a venue in a few minutes — no web-development
+        knowledge required. See the project README for step-by-step instructions.</p>
+      <p style="color:var(--muted);font-size:.9rem">Have a venue to add or a correction to
+        suggest? Contact the committee to have it included in the next update.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =============================== FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="#/" style="gap:12px">
+        <img class="brand-mark" src="assets/logo.png" alt="RCAI logo">
+        <span class="brand-text"><b style="color:#fff">RCAI</b>
+          <span style="color:#93aec8">Research Committee · AI &amp; DS</span></span>
+      </a>
+      <p>An information-sharing hub of AI &amp; Data Science research venues for students and
+        faculty. Not a submission portal — always submit on each venue's official site.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <div class="foot-cols">
+        <a href="#/conferences">Conferences</a>
+        <a href="#/cfp">Call for Papers</a>
+        <a href="#/categories">Sub-fields</a>
+        <a href="#/faculty">Faculty</a>
+        <a href="#/publications">Publications</a>
+        <a href="#/blog">Blog</a>
+        <a href="#/downloads">Downloads</a>
+      </div>
+    </div>
+    <div>
+      <h4>Committee</h4>
+      <a href="#/about">About RCAI</a>
+      <a href="#/about">How data is updated</a>
+      <a href="#/about">Suggest a venue</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> RCAI — Research Committee · AI &amp; DS.</span>
+    <span class="mono">Information-sharing purpose only.</span>
+  </div>
+</footer>
+
+<!-- =============================== MODAL ============================= -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-hd">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <div class="m-acr"></div>
+      <h2></h2>
+      <div class="m-tags"></div>
+    </div>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  // fill hero stats + year (kept out of app.js so home renders even if data grows)
+  (function(){
+    var d = window.RCAI_DATA;
+    if (d){
+      document.getElementById('stat-conf').textContent = d.CONFERENCES.length;
+      document.getElementById('stat-jour').textContent = d.JOURNALS.length;
+      document.getElementById('stat-cat').textContent  = d.CATEGORIES.length;
+      if (d.PUBLICATIONS) document.getElementById('stat-pub').textContent = d.PUBLICATIONS.length;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
